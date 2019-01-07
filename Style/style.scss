@@ -1,0 +1,97 @@
+$primary: #FFBD33;
+$primary-overlay: rgba(255,189,51,0.2);
+
+body
+{
+    margin-top: 105px;
+}
+
+.navbar
+{
+    box-shadow: 2px 2px 5px $primary;
+    opacity: 0.9;
+    background: #fff;
+
+    .nav-item
+    {
+        font-size: 1.4rem;
+        padding-right: 1.4rem;
+    }
+}
+
+#showcase
+{
+    position: relative;
+    background: url('../Images/background.jpg');
+    /*Do not repeat the background picture*/
+    background-repeat: none;
+    /*Positioning background picture to be centered*/
+    background-position: center;
+    /*Fill up the background with the WHOLE picture*/
+    background-size: cover;
+    /*Make The background not scrolling with the picture*/
+    background-attachment: fixed;
+    /*Give the box of minimum pixel*/
+    min-height: 678px;
+
+    .primary-overlay
+    {
+        /*Set overlay color*/
+        background: $primary-overlay;
+        /*An element with position: absolute; is positioned relative to
+        the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).*/
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.info-header
+{
+    width: 50%;
+    margin: auto;
+    border-bottom: 1px #A2B6AD solid;
+}
+
+#authors
+{
+    img
+    {
+        margin-top: -50px
+    }
+    .card:hover
+    {
+        background: $primary;
+        color: #fff;
+        /*All the icon turn white if the mounse point to the card*/
+        .fab
+        {
+            color:white;
+        }
+    }
+    /*Normally, all the icon has primary color*/
+    .fab
+    {
+        color:$primary;
+    }
+
+}
+
+@media(max-width: 700px)
+{
+    #showcase
+    {
+        min-height: 600px;
+        h1
+        {
+            font-size: 4rem
+        }
+    }
+    /*This is a customer class to change the responsive of the form*/
+    .mb-resp
+    {
+        margin-bottom: 1rem;
+    }
+}
